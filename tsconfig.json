@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react-jsx",
+    "allowJs": false,
+    "baseUrl": "src",
+    "paths": {
+      "@*": ["./*"],
+      "@features/*": ["./features/*"],
+      "@shared/*": ["./shared/*"],
+      "@pages/*": ["./pages/*"],
+      "@entity/*": ["./entity/*"],
+    },
+    "moduleResolution": "node"
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,28 @@
+@import '@shared/styles/common.scss';
+@import '@shared/styles/colors.scss';
+.menu-container {
+    @extend .container;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    header {
+        height: 50px;
+    }
+    .spoiler {
+        color: $text2;
+    }
+    .units {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        .units-text {
+            font-weight: 400;
+        }
+        .items {
+            display: flex;
+            justify-content: space-between;
+            row-gap: 60px;
+            flex-wrap: wrap;
+        }
+    }
+}

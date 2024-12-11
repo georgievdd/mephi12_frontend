@@ -1,0 +1,9 @@
+.light_backpack {
+    display: flex;
+    flex-direction: column;
+}
+
+.light_backpack .num {
+    display: inline-block;
+    transform: translateY(1px);
+}

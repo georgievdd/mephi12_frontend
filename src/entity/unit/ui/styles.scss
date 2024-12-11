@@ -1,0 +1,27 @@
+@import '@shared/styles/colors.scss';
+
+.card-container {
+    background-color: $primary;
+    border-radius: 10px;
+    max-width: 300px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+
+    .head {
+        display: flex;
+        .preview {
+            width: 70px;
+        }
+    }
+    .tags {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+    .description {
+        color: $text2;
+    }
+}
