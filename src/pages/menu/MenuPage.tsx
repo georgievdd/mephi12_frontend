@@ -23,4 +23,4 @@ export const MenuPage: RFC = () => {
   )
 }
 
-MenuPage.url = '/menu'
+MenuPage.url = '/'
