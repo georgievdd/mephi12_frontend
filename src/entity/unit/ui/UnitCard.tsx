@@ -9,7 +9,7 @@ export const UnitCard = ({preview, title, description, rating, url, author, name
       <section className='card-container hover-shadow'>
         <div className='head'>
           <h1>{title}</h1>
-          <img className='preview' src={preview} />
+          <img className='preview' src={preview} alt={name} />
         </div>
         <div className='tags'>
           <p className='tag'>{author}</p>
