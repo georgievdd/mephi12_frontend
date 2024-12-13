@@ -1,0 +1,40 @@
+@import '@shared/styles/colors.scss';
+
+.unit-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    .editorial-navigation {
+        width: min-content;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        text-wrap: nowrap;
+        gap: 10px;
+        background-color: white;
+        border-radius: 10px;
+        a {
+            text-decoration: underline;
+        }
+        .extra {
+            color: $text2;
+        }
+    }
+    .editorial-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        .block {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            ol {
+                margin-left: 30px;
+            }
+        }
+    }
+}

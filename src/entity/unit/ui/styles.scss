@@ -23,5 +23,10 @@
     }
     .description {
         color: $text1;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 6;
     }
 }

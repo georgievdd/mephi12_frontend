@@ -1,9 +1,10 @@
 import { useState, useEffect, FC } from 'react'
-import { DEFAULT_SPEED } from './config'
+import { DEFAULT_INTERVAL } from './config'
+import React from 'react'
 
 export type AnimatedComponentProps = {
   text: string
-  speed?: number
+  interval?: number
   className?: string
   style?: React.CSSProperties
   delay?: number
@@ -11,7 +12,7 @@ export type AnimatedComponentProps = {
 
 const createAnimatedComponent = <T extends keyof JSX.IntrinsicElements>(
   Tag: T): FC<AnimatedComponentProps> => {
-    return ({ text, speed = DEFAULT_SPEED, delay = 0, ...props }: AnimatedComponentProps) => {
+    return ({ text, interval: _interval = DEFAULT_INTERVAL, delay = 0, ...props }: AnimatedComponentProps) => {
       const [displayedIndex, setDisplayedIndex] = useState(0)
 
       useEffect(() => {
@@ -25,7 +26,7 @@ const createAnimatedComponent = <T extends keyof JSX.IntrinsicElements>(
               }
               return prev + 1
             })
-          }, speed)
+          }, _interval)
         }, delay)
         return () => clearInterval(interval)
       }, [text])

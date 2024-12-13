@@ -1,6 +1,6 @@
 import { cloneElement, ReactNode } from "react"
 import { AnimatedComponentProps } from "./AnimatedText"
-import { DEFAULT_SPEED } from "./config"
+import { DEFAULT_INTERVAL } from "./config"
 
 interface Props {
     children: ReactNode | ReactNode[] 
@@ -25,13 +25,13 @@ export const AnimatedTextScope = ({children}: Props) => {
   return (
     items.map((item) => {
       const oldDelay = item.props.delay ?? 0
-      const speed = item.props.speed ?? DEFAULT_SPEED
+      const interval = item.props.interval ?? DEFAULT_INTERVAL
       const { length } = item.props.text
       const newProps = {
         ...item.props,
         delay: oldDelay + reducedDelay,
       }
-      reducedDelay += oldDelay + speed * length
+      reducedDelay += oldDelay + interval * length
       return cloneElement(item as any, newProps)
     })
   )

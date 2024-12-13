@@ -9,7 +9,7 @@ export const MenuPage: RFC = () => {
     <div className='menu-container'>
       <header>
         <AnimatedText.Scope>
-          <AnimatedText.h1 text='3 семестр. Криптографические методы защиты информации.' />
+          <AnimatedText.h1 interval={50} text='3 семестр. Криптографические методы защиты информации.' />
           <AnimatedText.p className='spoiler' text='Кибервойна уже идет!' />
         </AnimatedText.Scope>
       </header>

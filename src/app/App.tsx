@@ -1,7 +1,8 @@
 import '@shared/styles/common.scss'
+import '@shared/styles/unit.scss'
 import { Routing } from './routing'
 
-const App = () => {
+export const App = () => {
 
   return (
     <main>
@@ -9,5 +10,3 @@ const App = () => {
     </main>
   )
 }
-
-export default App

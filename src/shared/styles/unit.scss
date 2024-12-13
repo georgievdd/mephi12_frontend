@@ -1,0 +1,36 @@
+@import './colors.scss';
+@import './common.scss';
+
+.unit-container {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    .tag {
+        background-color: white;
+        padding: 20px;
+    }
+    .header {
+        display: flex;
+    }
+    .content {
+        display: flex;
+        gap: 50px;
+        .services {
+            flex: 1;
+            height: min-content;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            a {
+                text-decoration: underline;
+            }
+        }
+        .description {
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}

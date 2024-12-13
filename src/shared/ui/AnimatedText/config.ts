@@ -1,1 +1,1 @@
-export const DEFAULT_SPEED = 20
+export const DEFAULT_INTERVAL = 20
