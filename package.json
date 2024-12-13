@@ -11,13 +11,11 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "effector": "^23.2.3",
-    "katex": "^0.16.15",
+    "axios": "^1.7.9",
     "path": "^0.12.7",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-jss": "^10.10.0",
-    "react-katex": "^3.0.1",
     "react-router-dom": "^6.28.0",
     "sass": "^1.82.0"
   },

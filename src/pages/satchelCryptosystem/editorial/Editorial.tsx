@@ -1,12 +1,12 @@
 import { RFC } from '@shared/types/component'
-import { UnitContainerHeader } from '@shared/ui/UnitContainerHeader/UnitContainerHeader'
+import { UnitHeader } from '@shared/ui/UnitHeader'
 import { root } from '../config'
 import './styles.scss'
 
 export const Editorial: RFC = () => {
   return (
     <div className='unit-container'>
-      <UnitContainerHeader />
+      <UnitHeader />
       <div className='editorial-navigation shadow'>
         <h3>Навигация по странице</h3>
         <a href='#annotation'>Аннотация</a>

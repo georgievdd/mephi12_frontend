@@ -2,13 +2,13 @@ import { RFC } from "@shared/types/component"
 import { root } from "../config"
 import { unitByName } from "@shared/config/units"
 import { Link } from "react-router-dom"
-import { UnitContainerHeader } from "@shared/ui/UnitContainerHeader/UnitContainerHeader"
+import { UnitHeader } from "@shared/ui/UnitHeader/UnitHeader"
 
 export const Common: RFC = () => {
   const { description } = unitByName(root.slice(1))
   return (
     <div className='unit-container'>
-      <UnitContainerHeader />
+      <UnitHeader />
       <div className="content">
         <div className="services tag shadow">
           <Link to={`${root}/editorial`}>Материалы</Link>

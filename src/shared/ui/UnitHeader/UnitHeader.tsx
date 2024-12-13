@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { getPathParts } from './utils'
 
-export const UnitContainerHeader = () => {
+export const UnitHeader = () => {
     const location = useLocation()
     const parts = getPathParts(location.pathname)
     return (

@@ -66,3 +66,30 @@ h2, h3 {
         color: $text2;
     }
 }
+
+.row {
+    display: flex;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start {
+    justify-content: start;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+@for $i from 1 through 55 {
+    @if ($i % 5 == 0) {
+        .gap-#{$i} {
+            gap: #{$i}px;
+        }
+    }
+}
