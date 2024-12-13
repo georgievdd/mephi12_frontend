@@ -1,6 +1,5 @@
 import { useState, useEffect, FC } from 'react'
 import { DEFAULT_INTERVAL } from './config'
-import React from 'react'
 
 export type AnimatedComponentProps = {
   text: string
