@@ -13,7 +13,7 @@ export const Editorial: RFC = () => {
         <a href='#backpack_problem'>Задача о рюкзаке</a>
         <a href='#super_growing_set'>Супервозрастающее множество</a>
         <a href='#satchel_cryptosystem'>Ранцевая криптосистема</a>
-        <a href='#satchel_cryptosystem_keygen'>Генерация ключей</a>
+        <p className='extra'>- <a href='#satchel_cryptosystem_keygen' className='extra'>Генерация ключей</a></p>
         <p className='extra'>- <a href='#satchel_cryptosystem_encrypt' className='extra'>Шифрование</a></p>
         <p className='extra'>- <a href='#satchel_cryptosystem_decrypt' className='extra'>Расшифровка</a></p>
       </div>
