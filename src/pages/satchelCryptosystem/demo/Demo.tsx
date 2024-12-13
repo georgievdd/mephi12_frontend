@@ -184,7 +184,7 @@ export const Demo: RFC = () => {
               ))}
             </div>
           </div>
-          <p>На основе легкого рюкзака и R составим трудную задачу об укладке рюкзака. B = S * A.</p>
+          <p>На основе легкого рюкзака и R составим трудную задачу об укладке рюкзака. B = A * R.</p>
           <div className='row gap-15'>
             <div className='values'>
               {lightPack.map((a, idx) => (
