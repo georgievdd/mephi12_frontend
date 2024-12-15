@@ -9,11 +9,19 @@ export type AnimatedComponentProps = {
   delay?: number
 }
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
 const createAnimatedComponent = <T extends keyof JSX.IntrinsicElements>(
   Tag: T): FC<AnimatedComponentProps> => {
     return ({ text, interval: _interval = DEFAULT_INTERVAL, delay = 0, ...props }: AnimatedComponentProps) => {
       const [displayedIndex, setDisplayedIndex] = useState(0)
-
+      const TAG = Tag as any
       useEffect(() => {
         let interval = 0
         setTimeout(() => {
@@ -30,7 +38,7 @@ const createAnimatedComponent = <T extends keyof JSX.IntrinsicElements>(
         return () => clearInterval(interval)
       }, [text])
 
-      return <Tag {...props as any}>{text.slice(0, displayedIndex)}</Tag>
+      return <TAG {...props as any}>{text.slice(0, displayedIndex)}</TAG>
     }
 }
 

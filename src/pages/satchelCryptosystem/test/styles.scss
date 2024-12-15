@@ -1,0 +1,80 @@
+@import '@shared/styles/common.scss';
+@import '@shared/styles/colors.scss';
+
+.unit-container {
+    .task-container {
+        .value {
+            p {
+                text-wrap: nowrap;
+            }
+            display: flex;
+            gap: 10px;
+            input {
+                background-color: transparent;
+                border: none;
+            }
+            .alwaysOutline {
+                outline: 2px solid $accent;
+                border-radius: 3px;
+            }
+            .withoutOutline {
+                outline: none;
+            }
+        }
+        margin-bottom: 70px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        .block {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .values {
+                background-color: $light-gray;
+                padding: 10px;
+                border-radius: 10px;
+                width: min-content;
+                max-width: 95%;
+            }
+            .values-l {
+                @extend .values;
+                display: flex;
+                width: max-content;
+            }
+        }
+        .subtitle {
+            color: $text2;
+        }
+        button {
+            background-color: $accent;
+            border: 2px solid $accent;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 15px;
+            width: min-content;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    }
+
+    .play {
+        width: 30px;
+        cursor: pointer;
+    }
+
+    [class^="result-"] {
+        padding: 15px;
+        border-radius: 15px;
+        p { max-width: 100%; }
+    }
+
+    .result-success {
+        background-color: $success;
+    }
+    .result-error {
+        background-color: $error;
+    }
+}

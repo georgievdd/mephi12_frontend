@@ -2,9 +2,10 @@ import { RFC } from '@shared/types/component'
 import { UnitHeader } from '@shared/ui/UnitHeader'
 import { root } from '../config'
 import './styles.scss'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { playIcon } from '@shared/assests'
 import { DEFAULT_LIGHT_BACKPACK, LEN, RIGHT } from './config'
+import { Input, useInput } from '@shared/ui/Input'
 
 const multNums = (R: string, S: string, T: string) => {
   const r = BigInt(R)
@@ -51,49 +52,6 @@ const Check = ({onClick}: {onClick: () => void}) => {
   return (
     <div className='row gap-10' onClick={onClick}>
       <img className='play' src={playIcon} alt='play' />
-    </div>
-  )
-}
-
-const useInput = (defaultValue: string) => {
-  const [value, setValue] = useState(defaultValue)
-  const onChange = (e: any) => {
-    setValue(e.target.value)
-  }
-  return {
-    value,
-    onChange,
-  }
-}
-
-const Input = ({ label, ...props }) => {
-  const spanRef = useRef<HTMLSpanElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const updateInputWidth = () => {
-    if (spanRef.current && inputRef.current) {
-      spanRef.current.textContent = inputRef.current.value || props.placeholder || ''
-      inputRef.current.style.width = `${spanRef.current.offsetWidth * 0.84}px`
-    }
-  }
-  useEffect(() => {
-    updateInputWidth()
-  }, [])
-
-  return (
-    <div className="value">
-      <p>{label}</p>
-      <span ref={spanRef} style={{
-        position: 'absolute',
-        visibility: 'hidden',
-        whiteSpace: 'pre',
-        fontSize: 'inherit',
-        fontFamily: 'inherit',
-      }} />
-      <input
-        ref={inputRef}
-        {...props}
-        onInput={updateInputWidth}
-      />
     </div>
   )
 }
