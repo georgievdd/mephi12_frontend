@@ -26,7 +26,7 @@ export type Solve = {
     lightBackpack: Number[]
     omega: Number
     hardBackpack: Number[]
-    encodedMessage: 534254
+    encodedMessage: Number
     decodedMessage: boolean[]
     module: Number
     reverseOmega: Number

@@ -98,7 +98,7 @@ const TestImpl = () => {
       lightBackpack: lightBackpack.map(v => Number(v.value)),
       omega: Number(R.value),
       hardBackpack: hardBackpack.map(v => Number(v.value)),
-      encodedMessage: 534254,
+      encodedMessage: Number(C.value),
       decodedMessage: M.value.split('').map(i => i === '1'),
       module: Number(T.value),
       reverseOmega: Number(S.value),
