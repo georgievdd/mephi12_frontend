@@ -8,6 +8,9 @@ import { useFetch } from '@shared/utils/useFetch'
 import { Input, useInput } from '@shared/ui/Input'
 import { Problem, Solve } from '@entity/task'
 
+const title1 = "Приведите пример ранцеврй криптосистемы с кодированием степеней(возможно в некоторых разрядах, ориентируйтесь на легкий ранец)."
+const title2 = "Приведите пример ранцеврй криптосистемы с кодированием произвольной сверхвозрастающей последовательности"
+
 export const useBackpack = (data: Problem, field: 'lightBackpack' | 'hardBackpack') => {
   const [backpack, set] = useState<{value: string, onChange: (v: any) => void, disabled?: boolean}[]>([])
 
@@ -110,12 +113,11 @@ const TestImpl = () => {
   if (!data) return
   return (
     <div className="task-container shadow">
-      <h3 className='title'>Заполните пропуски</h3>
+      <h3 className='title'>{P.value === '0' ? title1 : title2}</h3>
       {
-        P.value === '0' ?
-        <p className='subtitle' style={{marginBottom: '20px'}}>Супервозрастающая последовательность</p> :
+        P.value !== '0' &&
         <>
-          <p className='subtitle'>Степень шифрования</p>
+          <p className='subtitle'>Приведите пример ранцеврй криптосистемы с кодированием степеней(возможно в некоторых разрядах, ориентируйтесь на легкий ранец).</p>
           <Input label='P = ' {...P} />
         </>
       }
