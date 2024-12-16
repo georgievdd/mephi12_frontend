@@ -98,7 +98,7 @@ export const Demo: RFC = () => {
     setHightPack(calculateStep2(R.value, T.value, lightPack.map(({ value }) => value)))
   }, [R.value, T.value, ...lightPack.map(({ value }) => value)])
 
-  const M = useInput('10011')
+  const M = useInput('10011', true)
   const [C, setC] = useState('0')
   useEffect(() => {
     if (M.value && hightPack.length) {
